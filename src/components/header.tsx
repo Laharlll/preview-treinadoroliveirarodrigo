@@ -59,19 +59,19 @@ export default function Header() {
               <Menu className="h-5 w-5" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-72 bg-background">
-            <nav className="mt-8 flex flex-col gap-4">
+          <SheetContent side="top" className="rounded-b-2xl border-b border-border bg-background px-6 pb-8 pt-12">
+            <nav className="mt-4 flex flex-col items-center gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-lg text-muted-foreground transition-colors hover:text-primary"
+                  className="w-full rounded-lg py-2 text-center text-lg text-muted-foreground transition-colors hover:bg-accent hover:text-primary"
                 >
                   {link.label}
                 </a>
               ))}
-              <Button asChild className="mt-4 gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button asChild className="mt-2 w-full gap-2 bg-primary text-primary-foreground hover:bg-primary/90">
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                   <MessageCircle className="h-4 w-4" />
                   Fale Comigo
